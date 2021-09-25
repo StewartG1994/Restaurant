@@ -6,9 +6,20 @@
 }
 
 body{
-    background: url('./imgone.jpg');
+    background: url('./imgone.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
 }
 
+.content{
+    display: flex;
+    flex-direction: column;
+    height: 825px;
+    
+}
 h1{
     color: white;
     font-size: 50px;
@@ -19,8 +30,9 @@ h1{
     justify-content: center;
     align-items: center;
     height: 140px;
-    background-color: #393E46;
-    opacity: 60%;
+    background-color: rgb(57,62,70, 0.6);
+
+
 }
 
 .navone{
@@ -28,12 +40,57 @@ h1{
     align-items: center;
     justify-content: space-evenly;
     gap:10px;
-    width: 100%;
     height: 60px;
     flex-direction: row;
-    background-color: #393E46;
-    opacity: 60%;
+    background-color: rgb(57,62,70, 0.7);
+
     color: white;
+    
     font-size: 20px;
     
+}
+
+.contentOne{
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    color:#EEEEEE;
+    padding: 150px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 25px;
+    background-color: rgb(57,62,70, 0.7);
+
+
+
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(57,62,70, 0.7);
+    color: #EEEEEE;
+    padding: 30px;
+  
+    margin-bottom: auto;
+
+}
+
+.menuItem{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
+.address{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 20px;
 }
