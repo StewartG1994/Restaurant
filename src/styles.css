@@ -11,8 +11,11 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  
+}
 
+.content{
+    display: flex;
+    flex-direction: column;
 }
 
 h1{
@@ -49,6 +52,7 @@ h1{
     align-items:center ;
     color:#EEEEEE;
     padding: 100px;
+    min-height: 545px;
     text-align: center;
     font-size: 25px;
     background-color: rgb(57,62,70, 0.7);
