@@ -3,27 +3,45 @@ import imageOne from './imgone.jpg';
 
 const menuElements = (function(){
 
-    const content = document.querySelector('.content')
-    const headerContainer =  document.createElement('div');
-    headerContainer.className = 'header';
 
     const mainContent = () => {
-
-        let content = document.querySelector('.contentOne')
-        content.textContent = '';
-        let container = document.querySelector('div');
-
-
-        for (let i=0 ; i< 8; i++){
-        let menuDiv = document.createElement('div');
-            content.appendChild(menuDiv) ;
-            [i]
-        }
+        const pizzaFactory = (name, price) => {
+            return { name, price};
+          };
+          
+          const pizzaOne = pizzaFactory('Neapolitan Pizza', '£9.99')
+          const pizzaTwo = pizzaFactory('Pepperoni', '£9.99')
+          const pizzaThree = pizzaFactory('Garlic', '£9.99')
+          const pizzaFour = pizzaFactory('BBQ Chicken', '£9.99')
+          let pizzaArray = [];
+          pizzaArray.push(pizzaOne,pizzaTwo, pizzaThree, pizzaFour)
+   
+        let contentOne = document.querySelector('.contentOne');
+        contentOne.textContent = '';
+        let divcontainer = document.createElement('div');
+        divcontainer.className = 'menugrid';
         
-        container.appendChild(menuDiv);
-        menuDiv.className = 'menuItem'
-        
-  console.log('test')
+        pizzaArray.forEach(function(item){
+            
+            let card = document.createElement('div');
+            card.classList.add('menuDiv');
+            let title = document.createElement('h3');
+            let price = document.createElement('h2');
+
+            let pizzaName = item.name;
+            let pizzaPrice = item.price;
+            title.textContent = pizzaName;
+            price.textContent = pizzaPrice;
+            
+            console.log(title.textContent);
+            console.log(pizzaName, pizzaPrice)
+
+            card.appendChild(title);
+            card.appendChild(price);
+            divcontainer.appendChild(card);
+
+            contentOne.appendChild(divcontainer);
+        })
     }
     return {mainContent}
 })()
